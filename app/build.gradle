@@ -1,2 +1,41 @@
 plugins { id 'com.android.application' }
-android { namespace 'app.sumimemo.offline'; compileSdk 36; defaultConfig { applicationId 'app.sumimemo.offline'; minSdk 26; targetSdk 36; versionCode 1; versionName '1.0.0' }; buildTypes { release { minifyEnabled false } } }
+def signingValues = ['SUMI_STORE_FILE', 'SUMI_STORE_PASSWORD', 'SUMI_KEY_ALIAS', 'SUMI_KEY_PASSWORD'].collectEntries { [(it): System.getenv(it)] }
+def hasSigning = signingValues.values().every { it }
+android {
+    namespace 'app.sumimemo.offline'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'app.sumimemo.offline'
+        minSdk 26
+        targetSdk 36
+        versionCode 1
+        versionName '1.0.0'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    if (hasSigning) {
+        signingConfigs {
+            upload {
+                storeFile file(signingValues.SUMI_STORE_FILE)
+                storePassword signingValues.SUMI_STORE_PASSWORD
+                keyAlias signingValues.SUMI_KEY_ALIAS
+                keyPassword signingValues.SUMI_KEY_PASSWORD
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (hasSigning) signingConfig signingConfigs.upload
+        }
+    }
+}
+tasks.register('verifyReleaseSigning') {
+    doLast {
+        if (!hasSigning) throw new GradleException('Set all four SUMI_* signing environment variables before preparing a Play upload.')
+    }
+}
+tasks.register('playBundle') {
+    dependsOn 'verifyReleaseSigning', 'bundleRelease'
+}
+
+dependencies { androidTestImplementation 'androidx.test:runner:1.7.0'; androidTestImplementation 'androidx.test.ext:junit:1.3.0' }
