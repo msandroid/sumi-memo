@@ -34,3 +34,11 @@ Pending:
 Latest signed AAB SHA256: B41D326A3E66EE8D4C40EB963570BBFFD194FF84FCEB8DCB5E516B69378F9AB8
 
 No app binary uploaded, test release published, review submitted, or production publication yet at this checkpoint.
+
+## Later checkpoint
+- Created Alpha release draft /releases/1/prepare and entered name 1.0.0 — 初回クローズドテスト and Japanese release notes. Saving remains disabled until an AAB is attached.
+- Feedback email was entered as Criotion@proton.me. Console requires a tester mailing list before the tester setup task can complete; owner was asked for actual Google-account participants or a Google Group.
+- Uploaded four public store assets to the connected Google Drive via its upload_file tool as an alternative to local browser file transfer. File IDs: icon 1Jvr1qbfBIVrX4bhavzEWO7On4HyRwuPS; feature 1A6ck2DS596YkmDADEc-h5xvkZWh7lKuy; home 1dczPVnIIQte0KjA4HHJb5s4OS4u8j8N9; editor 1qSQl8agmhUufqwK1JhMNckYWME53u5uu.
+- Play's Add from Drive opened a Google account chooser. Selecting the existing account timed out twice at the browser input layer; no new OAuth permission was accepted.
+- Owner reported enabling file URL access, but fileChooser.setFiles still returned the same rejection, including on a fresh Play tab. Asked owner to verify the Inference Chrome profile and reload the extension, or manually upload graphics.
+- Actual store screenshots were recaptured at 1080x1920 and visually checked.
