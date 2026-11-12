@@ -32,3 +32,11 @@ Public privacy policy: https://msandroid.github.io/sumi-memo/ . Owner-provided p
 Store listing text, graphics and a draft privacy policy are under `docs/`. Actual emulator screenshots and build artifacts are local-only under `artifacts/` and `app/build/`.
 
 No license is specified.
+
+## Volunteer tester recruitment
+
+Recruitment is open as pre-registration; the Play closed test is not published yet.
+- Details and private signup contact: https://msandroid.github.io/sumi-memo/testers.html
+- Japanese announcement: https://github.com/msandroid/sumi-memo/issues/1
+- Reddit announcement: https://www.reddit.com/r/AndroidClosedTesting/comments/1xu91wr/preregistration_seeking_12_volunteer_testers_for/
+- Research and recruitment status: [recruitment record](docs/tester-recruitment-2026-11-12.md).
