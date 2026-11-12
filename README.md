@@ -23,7 +23,11 @@ On the configured Windows workstation, `scripts/build-play.ps1` loads the upload
 
 ## Release status
 
-See [the release record](docs/release-2026-11-12.md). App creation, review submission and production publication are not complete. The Play Console app-creation form is prepared but not submitted, pending the owner's legal confirmations. Support contact, completed public privacy policy, audience/distribution declarations and any account-specific testing gates also remain.
+See [the local release record](docs/release-2026-11-12.md) and [the current Play Console submission record](docs/play-submission-2026-11-12.md). The Play app is registered and 10/11 setup tasks are complete, including IARC rating and data safety. Store text is saved as a draft. Image and AAB uploads are blocked by the browser extension file-access setting; no review or release is submitted yet.
+
+The app-specific Console gate requires 12 testers continuously opted in to a closed test for at least 14 days before production-access application. Local emulator tests do not satisfy that gate.
+
+Public privacy policy: https://msandroid.github.io/sumi-memo/ . Owner-provided public support: Criotion@proton.me.
 
 Store listing text, graphics and a draft privacy policy are under `docs/`. Actual emulator screenshots and build artifacts are local-only under `artifacts/` and `app/build/`.
 
