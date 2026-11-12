@@ -19,6 +19,8 @@ OSの自動バックアップは無効です。アプリ内で削除したメモ
 ## お問い合わせ
 提供者: Cription
 
+サポートメール: Criotion@proton.me
+
 お問い合わせ窓口: https://github.com/msandroid/sumi-memo/issues
 
 お問い合わせは公開の場に掲載されます。メモ本文、パスワードなどの個人情報や機密情報を記載しないでください。
